@@ -1,0 +1,31 @@
+#container-list {
+  display: flex;
+  flex-direction: column;
+}
+.container-row-header {
+  display: flex;
+  border: 2px solid #ccc;
+  border-bottom: 4px solid #ccc;
+}
+.container-row {
+  display: flex;
+  border: 2px solid #ccc;
+}
+.container-row:hover {
+  background-color: rgba(20, 50, 180, 0.5);
+}
+
+.container-text-input {
+  width: 95%;
+}
+
+.container-column {
+  flex: 1; /* Distribute space equally */
+  padding: 2px;
+  box-sizing: border-box;
+  border-right: 2px solid #ccc;
+}
+
+.even {
+  background-color: rgba(225, 225, 225, 0.7);
+}

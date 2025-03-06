@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>AWS SSO Cookie Paster</title>
+  </head>
+  <body>
+    <h3>AWS SSO Cookie Paster</h3>
+
+    <div id="root-config-list">
+      <label>
+        Domain:
+        <input type="text" id="defaultDomain" name="defaultDomain" /><br />
+      </label>
+      <label>
+        Cookie:
+        <input type="text" id="defaultCookie" name="defaultCookie" /><br />
+      </label>
+      <label>
+        Source Container:
+        <select id="defaultSourceCookieStoreId"></select>
+      </label>
+    </div>
+    <button id="copyCookie">Copy Cookie</button>
+    <button id="openOptions">Open Options</button>
+    <div style="width: 400px"></div>
+    <div id="container-list">
+      <div class="container-row-header">
+        <div class="container-column">
+          <span class="container-all">Target</span>
+        </div>
+        <div class="container-column">
+          <span class="container-all">Container</span>
+        </div>
+        <div class="container-column">
+          <span class="container-all">URL</span>
+        </div>
+      </div>
+    </div>
+    <script src="../shared/script.js"></script>
+    <script src="../components/RowTablePopup.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

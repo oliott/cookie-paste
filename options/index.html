@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="options.css" />
+    <title>AWS SSO Cookie Paster</title>
+  </head>
+  <body id="bajsen">
+    <h1>Configuration</h1>
+    <div id="root-config-list">
+      <label for="defaultDomain">Default Domain:</label>
+      <input type="text" id="defaultDomain" name="defaultDomain" /><br />
+      <label for="defaultCookie">Default Cookie:</label>
+      <input type="text" id="defaultCookie" name="defaultCookie" /><br />
+      <label
+        >Default Source Cookie Store ID:
+        <select id="defaultSourceCookieStoreId"></select>
+      </label>
+    </div>
+    <div id="container-list">
+      <div class="container-row-header">
+        <div class="container-column">
+          <span class="container-all">Multi Account Container</span>
+        </div>
+        <div class="container-column">
+          <span class="container-all">Target of Paste</span>
+        </div>
+        <div class="container-column">
+          <span class="container-all">AccountID Target</span>
+        </div>
+        <div class="container-column">
+          <span class="container-all">Role Name Target</span>
+        </div>
+      </div>
+    </div>
+    <div id="saveConfigDiv">
+      <button type="button" id="saveConfig">Save Configurations</button>
+      <button type="button" id="testIfGod">Are you a god</button>
+    </div>
+    <script src="../shared/script.js"></script>
+    <script src="../components/RowTableOptions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
