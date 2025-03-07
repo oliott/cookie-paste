@@ -18,21 +18,46 @@
       </label>
     </div>
     <details>
-      <summary>
-        Info/Details
-      </summary>
-      This Add-on relies on <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">Firefox Multi-Account Containers</a>.
-      Workflow is this:
+      <summary>Info/Details</summary>
+      This Add-on relies on
+      <a
+        href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"
+        >Firefox Multi-Account Containers</a
+      >. Workflow is this:
       <ol>
-        <li>Target Domain: The domain that the cookie we are copying belongs to. This will usually be "example.awsapps.com" but "example" swapped out for something else.</li>
-        <li>Target Cookie: Name of the cookie we are going to copy. This will most likely be "x-amz-sso_authn".</li>
-        <li>Source Multi Account Container: Where we source the cookie from. This can be any container as long as the cookie has not expired.</li>
-        <li>Then for each Multi Account Container below that has "Target of Paste" checked when you copy the cookie will receive the cookie.</li>
-        <li>(Optional) Each Multi Account Container below that has AccountId and Role name target set will get a tab opened that targets this aws account and role to be logged in.</li>
+        <li>
+          Target Domain: The domain that the cookie we are copying belongs to.
+          This will usually be "example.awsapps.com" but "example" swapped out
+          for something else.
+        </li>
+        <li>
+          Target Cookie: Name of the cookie we are going to copy. This will most
+          likely be "x-amz-sso_authn".
+        </li>
+        <li>
+          Source Multi Account Container: Where we source the cookie from. This
+          can be any container as long as the cookie has not expired.
+        </li>
+        <li>
+          Then for each Multi Account Container below that has "Target of Paste"
+          checked when you copy the cookie will receive the cookie.
+        </li>
+        <li>
+          (Optional) Each Multi Account Container below that has AccountId and
+          Role name target set will get a tab opened that targets this aws
+          account and role to be logged in.
+        </li>
       </ol>
-      For event better experience <a href="https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/">Simple Tab Groups</a> and create a tab group for each multi account container. Also enable the feature "Catch and move tabs with containers to this group" to make sure that opened tabs are opened directly in the correct tab group.
+      For event better experience
+      <a
+        href="https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/"
+        >Simple Tab Groups</a
+      >
+      and create a tab group for each multi account container. Also enable the
+      feature "Catch and move tabs with containers to this group" to make sure
+      that opened tabs are opened directly in the correct tab group.
     </details>
-    <br>
+    <br />
     <div id="container-list">
       <div class="container-row-header">
         <div class="container-column">
