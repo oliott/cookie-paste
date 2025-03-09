@@ -19,6 +19,7 @@ FILES_TO_INCLUDE=(
   "manifest.json"
   "components"
   "popup"
+  "shared"
   "options"
   "license"
   "icons"
