@@ -22,12 +22,11 @@
         <select id="defaultSourceCookieStoreId"></select>
       </label>
     </div>
-    <button id="copyCookie">Copy Cookie</button>
-    <button id="openOptions">Open Options</button>
     <div style="width: 400px"></div>
-    <div id="container-list">
+    <div id="header-container">
       <div class="container-row-header">
         <div class="container-column">
+          <input id="targetAllCheckBox" type="checkbox" />
           <span class="container-all">Target</span>
         </div>
         <div class="container-column">
@@ -36,6 +35,15 @@
         <div class="container-column">
           <span class="container-all">URL</span>
         </div>
+      </div>
+    </div>
+    <div id="container-list"></div>
+    <div id="footer-wrapper">
+      <div class="footer-wrapper-column">
+        <button id="copyCookie">Paste 🍪</button>
+      </div>
+      <div class="footer-wrapper-column">
+        <button id="openOptions">⚙️</button>
       </div>
     </div>
     <script src="../shared/script.js"></script>

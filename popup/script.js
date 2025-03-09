@@ -8,6 +8,25 @@ document.getElementById("openOptions").addEventListener("click", () => {
     });
 });
 
+const targetAllCheckBox = document.getElementById("targetAllCheckBox");
+targetAllCheckBox.addEventListener("click", () => {
+  if (targetAllCheckBox.checked) {
+    const tableRows = document.getElementsByClassName(
+      TABLE_ROW_POPUP_CLASS_NAME,
+    );
+    for (const tableRow of tableRows) {
+      tableRow.containerRefresh.checked = true;
+    }
+  } else {
+    const tableRows = document.getElementsByClassName(
+      TABLE_ROW_POPUP_CLASS_NAME,
+    );
+    for (const tableRow of tableRows) {
+      tableRow.containerRefresh.checked = false;
+    }
+  }
+});
+
 async function loadConfigurations() {
   const savedConfig = await browser.storage.local.get();
   const contextualIdentities = await getContextualIdentities();
@@ -85,6 +104,7 @@ async function set_cookie(cookies, cookie_name) {
       const tableRows = document.getElementsByClassName(
         TABLE_ROW_POPUP_CLASS_NAME,
       );
+
       for (const tableRow of tableRows) {
         const checkBox = tableRow.containerRefresh;
         if (checkBox.checked) {

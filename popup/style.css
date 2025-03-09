@@ -1,10 +1,55 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 #body {
   margin: 10px 10px 10px 10px;
 }
+
 #container-list {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  height: 80%;
 }
+
+#header-container {
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+
+#footer-wrapper {
+  position: static;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-wrapper-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#copyCookie {
+  font-size: 18px;
+  border-radius: 25% 25%;
+}
+
+#openOptions {
+  font-size: 24px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
 .container-row-header {
   display: flex;
   border: 2px solid #ccc;
