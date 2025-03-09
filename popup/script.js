@@ -104,7 +104,6 @@ async function set_cookie(cookies, cookie_name) {
       const tableRows = document.getElementsByClassName(
         TABLE_ROW_POPUP_CLASS_NAME,
       );
-
       for (const tableRow of tableRows) {
         const checkBox = tableRow.containerRefresh;
         if (checkBox.checked) {
@@ -164,7 +163,6 @@ submitButton.addEventListener("click", async () => {
   ).value;
   var domain = document.getElementById("defaultDomain").value;
   var cookie_name = document.getElementById("defaultCookie").value;
-
   try {
     var filtered_cookies = await filter_cookies(
       source_store_id,
@@ -174,7 +172,18 @@ submitButton.addEventListener("click", async () => {
   } catch (error) {
     console.error(`An error ocurred when trying to filter cookies ${error}`);
   }
-  await set_cookie(filtered_cookies, cookie_name);
+  if (filtered_cookies.length == 0) {
+    var span_element = document.createElement("span");
+    span_element.appendChild(
+      document.createTextNode("❗️Could not find any cookie❗️"),
+    );
+    document.getElementById("status-footer").appendChild(span_element);
+    window.setTimeout(() => {
+      document.getElementById("status-footer").removeChild(span_element);
+    }, 2000);
+  } else {
+    await set_cookie(filtered_cookies, cookie_name);
+  }
 });
 
 loadConfigurations();

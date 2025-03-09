@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "AWS SSO Cookie Copy",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Firefox extension that copies a cookie into multiple Multi-Account Containers.",
   "icons": {
     "48": "icons/icon48.png"
